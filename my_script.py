@@ -1,6 +1,14 @@
 import argparse
 import pandas as pd
 import mlflow
+import os
+
+file_path = "/app/mlprojects/dataset.csv"
+
+if os.path.exists(file_path):
+    print("Il file esiste.")
+else:
+    print("Il file non esiste.")
 
 def load_dataset(dataset_file):
     df = pd.read_csv(dataset_file)
@@ -41,8 +49,9 @@ def main():
     print_evaluation_results(evaluation_results)
 
     # Registra il modello in MLflow
-    mlflow.log_params(vars(args))
-    mlflow.sklearn.log_model(model, "model")
+    with mlflow.start_run():
+        mlflow.log_params(vars(args))
+        mlflow.sklearn.log_model(model, "model")
 
 if __name__ == '__main__':
     main()
