@@ -4,5 +4,5 @@ conda_env: conda.yaml
 entry_points:
   main:
     parameters:
-      dataset_file: {type: string, default: './dataset.csv'}
-    command: "python my_script.py --dataset $dataset_file"
+      dataset: {type: string, default: './dataset.csv'}
+    command: "python my_script.py --dataset $dataset"
