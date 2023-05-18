@@ -1,9 +1,6 @@
-name: my_ml_project
-conda_env: conda.yaml
-
 entry_points:
   main:
     parameters:
-    - name: dataset
-      type: string
+      dataset:
+        type: string
     command: "python my_script.py --dataset {dataset}"
