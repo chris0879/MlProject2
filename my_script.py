@@ -3,12 +3,12 @@ import pandas as pd
 import mlflow
 import os
 
-file_path = "/app/mlprojects/dataset.csv"
+""" file_path = "/app/mlprojects/dataset.csv"
 
 if os.path.exists(file_path):
     print("Il file esiste.")
 else:
-    print("Il file non esiste.")
+    print("Il file non esiste.") """
 
 def load_dataset(dataset_file):
     df = pd.read_csv(dataset_file)
