@@ -8,5 +8,27 @@ dependencies:
   - mlflow
   - pip
   - pip:
-    - nano
+    name: Lisbon
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - pandas
+  - pip
+  - ipykernel 
+  - pip:
+    - matplotlib>=3.2.2
+    - opencv-python>=4.1.1
+    - mlflow
+    - papermill
+    - Pillow
+    - shapely
+    - PyYAML>=5.3.1 #YOLOV5 requirements
+    - requests>=2.23.0
+    - scipy>=1.4.1
+    - torch>=1.7.0
+    - torchvision>=0.8.1
+    - tqdm>=4.64.0
+
     
