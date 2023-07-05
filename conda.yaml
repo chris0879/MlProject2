@@ -8,5 +8,5 @@ dependencies:
   - mlflow
   - pip
   - pip:
-    - ultralytics
+    - nano
     
