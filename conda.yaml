@@ -6,3 +6,6 @@ dependencies:
   - pandas
   - scikit-learn
   - mlflow
+  - pip:
+    - ultralytics
+    
